@@ -62,7 +62,7 @@ public class Empleado {
         Calendar fechaHoy = new GregorianCalendar();
         int anioActual = fechaHoy.get(Calendar.YEAR);
 
-        return getAnioIngreso() - anioActual;
+        return anioActual - getAnioIngreso();
     }
 
     private double descuento(){
@@ -97,7 +97,9 @@ public class Empleado {
     }
 
     public void mostrar(){
-        
+        System.out.println("Nombre y Apellido: " + nomYape());
+        System.out.println("\nCUIL:" + getCuil() + " Antiguedad: " + antiguedad()  + "años de servicio");
+        System.out.println("\nSueldo Neto: $ " + sueldoNeto());
     }
 
 }
