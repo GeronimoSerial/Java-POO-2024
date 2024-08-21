@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainEmpleado",
+            "request": "launch",
+            "mainClass": "MainEmpleado",
+            "projectName": "Trabajo Practico 2_35d02be7"
+        },
+        {
+            "type": "java",
             "name": "MainLaboratorio",
             "request": "launch",
             "mainClass": "MainLaboratorio",
