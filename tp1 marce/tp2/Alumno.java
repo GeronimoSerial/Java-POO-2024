@@ -54,31 +54,31 @@ public class Alumno {
     }
 
     public double promedio() {
-        return (this.getNota1() + this.getNota2()) / 2.0;
+        return (getNota1() + getNota2()) / 2.0;
     }
 
     public boolean aprueba() {
-        return this.promedio() > 7.0 && this.getNota1() >= 6 && this.getNota2() >= 6;
+        return promedio() > 7.0 && getNota1() >= 6 && getNota2() >= 6;
     }
 
     public String leyendaAprueba() {
-        if(this.aprueba()) {
+        if(aprueba()) {
             return "Aprobado";
         }
         return "Desaprobado";
     }
 
     public String nomYape() {
-        return this.getNombre() + " " + this.getApellido();
+        return getNombre() + " " + getApellido();
     }
 
     public String apeYnom() {
-        return this.getApellido() + " " + this.getNombre();
+        return getApellido() + " " + getNombre();
     }
 
     public void mostrar() {
-        System.out.println("Nombre y Apellido: " + this.nomYape());
-        System.out.println("LU: " + this.getLu() + " " + "Notas: " + this.getNota1() + " - " + this.getNota2());
-        System.out.println("Promedio: " + this.promedio() + " - " + this.leyendaAprueba());
+        System.out.println("Nombre y Apellido: " + nomYape());
+        System.out.println("LU: " + getLu() + " " + "Notas: " + getNota1() + " - " + getNota2());
+        System.out.println("Promedio: " + promedio() + " - " + leyendaAprueba());
     }
 }

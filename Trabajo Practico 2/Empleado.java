@@ -62,11 +62,11 @@ public class Empleado {
         Calendar fechaHoy = new GregorianCalendar();
         int anioActual = fechaHoy.get(Calendar.YEAR);
 
-        return anioActual - getAnioIngreso();
+        return anioActual - this.getAnioIngreso();
     }
 
     private double descuento(){
-        return (getSueldoBasico() * 0.02) + 1500;
+        return (this.getSueldoBasico() * 0.02) + 1500;
     }
 
     private double adicional(){
@@ -82,24 +82,24 @@ public class Empleado {
             porcentaje = 0.06;
        }
 
-       return getSueldoBasico() * porcentaje;
+       return this.getSueldoBasico() * porcentaje;
     }
 
     public double sueldoNeto(){
-        return getSueldoBasico() + adicional() - descuento();
+        return this.getSueldoBasico() + adicional() - descuento();
     }
 
     public String nomYape() {
-        return getNombre() + " " + getApellido();
+        return this.getNombre() + " " + this.getApellido();
     }
     public String apeYnom(){
-        return getApellido() + " " + getNombre();
+        return this.getApellido() + " " + this.getNombre();
     }
 
     public void mostrar(){
-        System.out.println("Nombre y Apellido: " + nomYape());
-        System.out.println("\nCUIL:" + getCuil() + " Antiguedad: " + antiguedad()  + " años de servicio");
-        System.out.println("\nSueldo Neto: $ " + sueldoNeto());
+        System.out.println("Nombre y Apellido: " + this.nomYape());
+        System.out.println("\nCUIL:" + this.getCuil() + " Antiguedad: " + this.antiguedad()  + " años de servicio");
+        System.out.println("\nSueldo Neto: $ " + this.sueldoNeto());
     }
 
 }
